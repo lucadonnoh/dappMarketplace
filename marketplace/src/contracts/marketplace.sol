@@ -33,7 +33,7 @@ contract Marketplace
 
     constructor() public
     {
-        name = "Donnoh's Marketplace";
+        name = "Donnoh's Marketplace!";
     }
 
     function createProduct(string memory _name, uint _price) public
