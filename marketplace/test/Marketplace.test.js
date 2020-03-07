@@ -29,7 +29,7 @@ contract('Marketplace', (accounts) => {
     describe('products', async () => {
         let result, productCount
         before(async () => {
-            result = await marketplace.createProduct()
+            result = await marketplace.createProduct('Fortnite Ninja Skin', web3.utils.toWei('1', 'Ether'))
             productCount = await marketplace.productCount()
         })
 
