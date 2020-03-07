@@ -30,6 +30,10 @@ contract Marketplace
 
     function createProduct(string memory _name, uint _price) public
     {
+        //require a name
+        require(bytes(_name).length > 0);
+        //require a valid price
+        require(_price > 0);
         //make sure params are correct
         // increment productCount
         productCount++;
