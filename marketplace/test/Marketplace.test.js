@@ -36,6 +36,7 @@ contract('Marketplace', (accounts) => {
         it('creates products', async () => {
             //SUCCESS
             assert.equal(productCount, 1)
+            console.log(result.logs)
         })
     })
 } )

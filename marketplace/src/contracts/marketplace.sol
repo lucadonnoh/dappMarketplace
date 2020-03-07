@@ -15,7 +15,13 @@ contract Marketplace
         bool purchased;
     }
 
-    
+    event ProductCreated(
+        uint id,
+        string name,
+        uint price,
+        address owner,
+        bool purchased
+    );
 
     constructor() public
     {
@@ -30,6 +36,7 @@ contract Marketplace
         // create the product
         products[productCount] = Product(productCount, _name, _price, msg.sender, false);
         // trigger an event
+        emit ProductCreated(productCount, _name, _price, msg.sender, false);
     }
 }
 
