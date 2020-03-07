@@ -15,6 +15,8 @@ contract Marketplace
         bool purchased;
     }
 
+    
+
     constructor() public
     {
         name = "Donnoh's Marketplace";
@@ -23,9 +25,10 @@ contract Marketplace
     function createProduct(string memory _name, uint _price) public
     {
         //make sure params are correct
-        // create the product
         // increment productCount
         productCount++;
+        // create the product
+        products[productCount] = Product(productCount, _name, _price, msg.sender, false);
         // trigger an event
     }
 }
