@@ -26,5 +26,16 @@ contract('Marketplace', (accounts) => {
 
 
 
-    
+    describe('products', async () => {
+        let result, productCount
+        before(async () => {
+            result = await marketplace.createProduct()
+            productCount = await marketplace.productCount()
+        })
+
+        it('creates products', async () => {
+            //SUCCESS
+            assert.equal(productCount, 1)
+        })
+    })
 } )
