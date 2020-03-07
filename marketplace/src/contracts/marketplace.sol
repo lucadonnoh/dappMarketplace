@@ -3,6 +3,8 @@ pragma solidity ^0.6.1;
 contract Marketplace
 {
     string public name;
+    uint public productCount = 0;
+    mapping(uint => Product) public products;
 
     struct Product
     {
@@ -16,6 +18,13 @@ contract Marketplace
     constructor() public
     {
         name = "Donnoh's Marketplace";
+    }
+
+    function createProduct() public
+    {
+        //make sure params are correct
+        // create the product
+        // trigger an event
     }
 }
 
